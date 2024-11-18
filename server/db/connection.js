@@ -8,7 +8,7 @@ const connection = async (req, res) => {
         console.log("Mongo connected");
       });
   } catch (error) {
-    res.json({ message: "No tconnected" });
+    res.status(400).json({ message: "Not connected" });
   }
 };
 
